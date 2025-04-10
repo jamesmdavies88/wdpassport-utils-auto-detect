@@ -13,7 +13,6 @@ sudo apt install python3 python3-dev python3-pip git
 ```
 
 The unlock_wd.sh script handles creating a virtual environment to execute the code.  It should handle all dependency installs...
-```
 
 ## Using the unlock_wd.sh Script
 
