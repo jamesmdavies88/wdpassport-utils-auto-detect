@@ -1,4 +1,3 @@
-
 # WD My Passport Drive Hardware Encryption Utility for Linux
 
 A Linux command-line utility to lock, unlock, and manage the hardware encryption functionality of Western Digital My Passport external drives. Written in Python 3.
@@ -81,6 +80,42 @@ This tool will try to auto-detect the device path of your WD My Passport device.
 -h, --help            show this help message and exit
 ```
 Lists all possible arguments.
+
+## Using the unlock_wd.sh Script
+
+For convenience, this repository includes the `unlock_wd.sh` shell script that simplifies the process of unlocking and mounting your WD My Passport drive.
+
+### Basic Usage
+
+```
+sudo ./unlock_wd.sh
+```
+
+This will:
+1. Detect your WD My Passport drive
+2. Prompt you for the password
+3. Unlock the drive
+4. Mount it automatically
+
+### With Device Specification
+
+If you have multiple drives or if auto-detection fails:
+
+```
+sudo ./unlock_wd.sh /dev/sdX
+```
+
+Replace `/dev/sdX` with the correct device path (e.g., `/dev/sdb`).
+
+### Permissions
+
+Make sure the script is executable:
+
+```
+chmod +x unlock_wd.sh
+```
+
+You may need to run the script with sudo privileges to access the device.
 
 <h1>Disclaimer</h1>
 
